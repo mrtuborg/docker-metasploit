@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# export LC_CTYPE="UTF-8"
+
 echo '[+] Initializing local clock'
 ntpdate -B -q 0.debian.pool.ntp.org
 source /usr/local/rvm/scripts/rvm

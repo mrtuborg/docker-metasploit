@@ -22,7 +22,8 @@ COPY README.md /
 COPY tmux.conf /root/.tmux.conf
 
 # Get Metasploit
-RUN cd /opt && \
+RUN localedef -i en_US -f UTF-8 en_US.UTF-8  && \
+    cd /opt && \
     git clone https://github.com/rapid7/metasploit-framework.git msf && \
     cd msf && \
     # Setup rvm
